@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoboLearn</title>
+    <meta name="description" content="An AI-powered platform for collaborative learning at UNM." />
+    <link rel="icon" type="image/x-icon" href="lobo_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo"><span class="red">LOBO</span>LEARN</div>
+            <nav>
+                <!-- <a href="#">About</a>
+                <a href="#">Courses</a>
+                <a href="#">Requests</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- <h1  style="font-size: 30px; margin-bottom: 50px;">Welcome to LoboLearn</h1> -->
+
+        <!-- <img src="lobo_logo.png" height="100px" style="margin-bottom: 50px;"> -->
+
+        <section class="card" style="margin-top: 50px; margin-bottom: 50px;">
+            <div class="question-header">
+                <span class="badge">Try me!</span>
+                <h3>Question: Matrix Multiplication</h3>
+            </div>
+            <hr />
+            <p class="question-desc">
+                Matrices A and B are given below, find out the missing component of dot product A·B:
+            </p>
+
+            <!-- MATRIX LAYOUT SECTION -->
+            <div class="matrix-outer">
+                <!-- B matrix -->
+                <div class="matrix-row">
+                    <div class="matrix-col-right">
+                        <div class="matrix-col">
+                            <span class="matrix-label">B</span>
+                            <div class="matrix-box">
+                                <div class="matrix-cell" id="b0-value">5</div>
+                                <div class="matrix-cell" id="b1-value">9</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A and A·B matrices -->
+                <!-- A and A·B matrices -->
+                <div class="matrix-row">
+                <!-- A -->
+                <div class="matrix-col">
+                    <span class="matrix-label">A</span>
+                    <div class="matrix-box">
+                        <div class="matrix-cell" id="a-value">2</div>
+                    </div>
+                </div>
+
+                <!-- A·B -->
+                <div class="matrix-col">
+                    <span class="matrix-label">A·B</span>        
+                    <div class="matrix-box">
+                        <div class="matrix-cell" id="ab0-value">10</div>
+                        <div class="matrix-cell amber" id="ab1-value">?</div>
+                    </div>
+                </div>
+                </div>
+
+
+            </div>
+
+            <input id="answer-input" type="number" placeholder="Missing component of A·B" style="width: 570px;" />
+            <div id="result-text" class="result"></div>
+            
+            <div class="buttons">
+                <button onclick="newVariant()">New variant</button>
+                <button onclick="gradeAnswer()">Grade</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="unm_logo_horizontal.png" alt="UNM logo" height="35px" />
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
