@@ -198,7 +198,8 @@ footer {
 
 .footer-top img {
     width: 100%;
-    max-height: 160px;  /* Controls vertical size */
+    max-height: 160px;
+    /* Controls vertical size */
     object-fit: cover;
     display: block;
 }
@@ -238,7 +239,7 @@ footer {
     font-size: 14px;
     cursor: pointer;
     text-align: center;
-    width: 100%;
+    width: 220px;
 }
 
 .footer-bottom {
@@ -299,4 +300,94 @@ footer {
     color: #555;
     line-height: 1.6;
     text-align: justify;
+}
+
+.input-responsive {
+    width: 572px;
+}
+
+
+@media (max-width: 768px) {
+    header div {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px 0;
+        font-size: 16px;
+        display: block;
+        text-align: center;
+    }
+
+    .intro-title {
+        font-size: 28px;
+    }
+
+    .intro-description {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .matrix-outer {
+        width: 100%;
+        align-items: center;
+    }
+
+    input {
+        width: 100% !important;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-col {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-right {
+        margin-top: 10px;
+    }
+
+    .badge {
+        display: none;
+    }
+
+    .input-responsive {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
 }
