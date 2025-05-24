@@ -23,11 +23,11 @@ body::before {
     z-index: -1;
 }
 
-header {
+/* header {
     background: linear-gradient(to left, #ffffff 0%, #f3f3f3 100%);
     padding: 20px;
     border-radius: 10px;
-}
+} */
 
 .nav-container {
     display: flex;

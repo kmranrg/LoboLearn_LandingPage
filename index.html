@@ -13,15 +13,27 @@
 
 <body>
     <header>
-        <div class="nav-container">
-            <div class="logo"><span class="red">LOBO</span>LEARN</div>
-            <nav>
-                <!-- <a href="#">About</a>
-                <a href="#">Courses</a>
-                <a href="#">Requests</a> -->
-            </nav>
+        <div
+            style="background-color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <img src="unm_me_logo.png" alt="UNM Mechanical Engineering Logo" height="50">
+            <div style="display: flex; align-items: center;">
+                <input type="text" placeholder="Search Engineering…"
+                    style="padding: 5px; border-radius: 7px; border: 1px solid #ccc;">
+                <button
+                    style="margin-left: 5px; padding: 5px 12px; background-color: #ba0c2f; color: white; border: none; border-radius: 4px; height: 30px;">Search</button>
+            </div>
         </div>
+        <nav style="background-color: #ba0c2f; display: flex; justify-content: center;">
+            <a href="#" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">ABOUT</a>
+            <a href="#"
+                style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">ACCREDITATION</a>
+            <a href="#" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">RESEARCH</a>
+            <a href="#" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">PROGRAMS &
+                DEGREES</a>
+            <a href="#" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">STUDENTS</a>
+        </nav>
     </header>
+
 
     <main>
         <!-- <h1  style="font-size: 30px; margin-bottom: 50px;">Welcome to LoboLearn</h1> -->
@@ -56,22 +68,22 @@
                 <!-- A and A·B matrices -->
                 <!-- A and A·B matrices -->
                 <div class="matrix-row">
-                <!-- A -->
-                <div class="matrix-col">
-                    <span class="matrix-label">A</span>
-                    <div class="matrix-box">
-                        <div class="matrix-cell" id="a-value">2</div>
+                    <!-- A -->
+                    <div class="matrix-col">
+                        <span class="matrix-label">A</span>
+                        <div class="matrix-box">
+                            <div class="matrix-cell" id="a-value">2</div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- A·B -->
-                <div class="matrix-col">
-                    <span class="matrix-label">A·B</span>        
-                    <div class="matrix-box">
-                        <div class="matrix-cell" id="ab0-value">10</div>
-                        <div class="matrix-cell amber" id="ab1-value">?</div>
+                    <!-- A·B -->
+                    <div class="matrix-col">
+                        <span class="matrix-label">A·B</span>
+                        <div class="matrix-box">
+                            <div class="matrix-cell" id="ab0-value">10</div>
+                            <div class="matrix-cell amber" id="ab1-value">?</div>
+                        </div>
                     </div>
-                </div>
                 </div>
 
 
@@ -79,7 +91,7 @@
 
             <input id="answer-input" type="number" placeholder="Missing component of A·B" style="width: 570px;" />
             <div id="result-text" class="result"></div>
-            
+
             <div class="buttons">
                 <button onclick="newVariant()">New variant</button>
                 <button onclick="gradeAnswer()">Grade</button>
