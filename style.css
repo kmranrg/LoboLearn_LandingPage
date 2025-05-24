@@ -17,7 +17,6 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('math_bg.svg');
     background-position: center;
     opacity: 0.5;
     z-index: -1;
@@ -57,7 +56,7 @@ main {
     flex-direction: column;
     align-items: center;
     /* <-- added */
-    padding: 40px;
+    padding: 20px;
     /* <-- added for vertical centering */
 }
 
@@ -275,4 +274,29 @@ footer {
 
 .footer-bottom-right a:first-child {
     margin-left: 0;
+}
+
+.intro {
+    text-align: center;
+    margin: 60px auto 40px auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.intro-title {
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.intro-title .highlight {
+    color: #ba0c2f;
+}
+
+.intro-description {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
 }
