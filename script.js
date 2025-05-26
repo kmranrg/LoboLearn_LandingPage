@@ -21,11 +21,11 @@ function gradeAnswer() {
     const result = document.getElementById("result-text");
 
     if (userVal === ans) {
-        result.textContent = "Correct answer!";
+        result.textContent = "Correct answer";
         result.style.color = "green";
     } else {
-        result.textContent = "Incorrect answer!";
-        result.style.color = "red";
+        result.textContent = "Incorrect answer";
+        result.style.color = "#ba0c2f";
     }
 }
 
