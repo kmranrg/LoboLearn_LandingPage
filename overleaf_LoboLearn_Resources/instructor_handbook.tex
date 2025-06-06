@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+
+% --- Packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Maroon,
+    urlcolor=Maroon
+}
+
+% --- UNM Theme Colors ---
+\definecolor{UNMRed}{HTML}{BA0C2F}
+\definecolor{LightGray}{gray}{0.95}
+\definecolor{DarkText}{HTML}{1E1E1E}
+\definecolor{Maroon}{HTML}{800000}
+
+\pagestyle{empty}
+\titleformat{\section}{\color{UNMRed}\normalfont\Large\bfseries}{}{0em}{}
+
+% --- Code Style ---
+\lstset{
+    backgroundcolor=\color{LightGray},
+    basicstyle=\ttfamily\small,
+    frame=single,
+    breaklines=true,
+    tabsize=2
+}
+
+\begin{document}
+
+% --- Title ---
+\begin{center}
+    {\LARGE \bfseries \color{UNMRed}Instructor Handbook: Writing Questions}
+
+    \vspace{1em}
+    \includegraphics[width=0.20\textwidth]{logo_bold.png}
+\end{center}
+
+\vspace{-1em}
+\noindent\rule{\linewidth}{1pt}
+
+% --- Intro ---
+\section*{Overview}
+This short guide will help you get started with creating your own interactive question in LoboLearn. Each question typically includes two files:
+
+\begin{itemize}
+    \item \textbf{question.html} — the interface students interact with
+    \item \textbf{server.py} — defines how the question is generated and graded
+\end{itemize}
+
+---
+
+\section*{1. Frontend: question.html}
+This file defines how the question is displayed to the student. Here's a simple numeric input example:
+
+\begin{lstlisting}[language=HTML]
+<pl-question-panel>
+  <p>What is {{params.a}} + {{params.b}}?</p>
+  <pl-number-input answers-name="ans" placeholder=""></pl-number-input>
+</pl-question-panel>
+\end{lstlisting}
+
+---
+
+\section*{2. Backend: server.py}
+This file generates the random numbers used in the question and checks the student's answer.
+
+\begin{lstlisting}[language=Python]
+import random
+
+def generate(data):
+    a = random.randint(1, 10)
+    b = random.randint(1, 10)
+    data['params']['a'] = a
+    data['params']['b'] = b
+    data['correct_answers']['ans'] = a + b
+\end{lstlisting}
+
+---
+
+\section*{3. How It Works}
+When a student loads the question:
+\begin{enumerate}
+    \item \texttt{server.py} randomly generates values for \texttt{a} and \texttt{b}
+    \item These values are passed to \texttt{question.html} using \texttt{{\{\{params.a\}\}}}
+    \item When the student submits, the answer is compared to \texttt{a + b}
+\end{enumerate}
+
+---
+
+
+\vfill
+\begin{center}
+    \textit{Need help? Contact the team at \href{mailto:lobolearn@unm.edu}{lobolearn@unm.edu}}\\[0.5em]
+\end{center}
+
+\end{document}

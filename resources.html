@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | LoboLearn</title>
+  <meta name="description" content="Guides, tutorials, and reference materials for using LoboLearn." />
+  <link rel="icon" type="image/x-icon" href="lobo_logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div
+            style="background-color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html"><img src="logo_bold.png" alt="UNM Mechanical Engineering Logo" height="15"></a>
+            <div style="display: flex; align-items: center;">
+                <a target="_blank" href="https://www.unm.edu/"><img src="unm_logo_horizontal.png" alt="UNM Logo" height="28" style="padding: 9px;"></a>
+            </div>
+        </div>
+
+    <nav style="background-color: #ba0c2f; display: flex; justify-content: center;">
+      <a href="index.html" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">HOME</a>
+      <a href="about.html" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">ABOUT</a>
+      <a href="courses.html" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">COURSES</a>
+      <a href="resources.html" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; background-color: rgba(0,0,0,0.15);">RESOURCES</a>
+      <a href="contact.html" style="color: white; padding: 14px 20px; text-decoration: none; font-weight: bold;">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+    <section class="intro">
+      <h1 class="intro-title">Learning <span class="highlight">Resources</span></h1>
+      <p class="intro-description" style="margin-bottom: 40px;">
+        Everything you need to hit the ground running with LoboLearn — user guides, handbooks, and more.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 10px;">
+
+        <!-- Card Template -->
+        <a href="unm_google_account.pdf" target="_blank" style="flex: 1 1 280px; max-width: 320px; text-decoration: none;">
+          <div style="border: 1px solid #ddd; border-radius: 10px; padding: 20px; min-height: 160px; box-sizing: border-box; background-color: white; transition: box-shadow 0.2s;">
+            <h3 style="margin-top: 0; color: #ba0c2f;">UNM Google Account</h3>
+            <p style="color: #333;">Step-by-step PDF for creating google account using your UNM institutional email.</p>
+          </div>
+        </a>
+
+        <a href="instructor_handbook_writing_questions.pdf" target="_blank" style="flex: 1 1 280px; max-width: 320px; text-decoration: none;">
+          <div style="border: 1px solid #ddd; border-radius: 10px; padding: 20px; min-height: 160px; box-sizing: border-box; background-color: white; transition: box-shadow 0.2s;">
+            <h3 style="margin-top: 0; color: #ba0c2f;">Instructor Handbook</h3>
+            <p style="color: #333;">Design variants, autograde code questions, and manage cohorts — all in one reference.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <img src="footer-bg.jpg" height="150" alt="UNM Albuquerque view" />
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p>
+          © The University of New Mexico, Albuquerque, NM 87131, (505) 277-0111<br>
+          New Mexico's Flagship University
+        </p>
+      </div>
+      <div class="footer-bottom-right">
+        <a href="https://www.unm.edu/accessibility.html">Accessibility</a>
+        <a href="https://www.unm.edu/legal.html">Legal</a>
+        <a href="https://www.unm.edu/contactunm.html">Contact UNM</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- HOVER EFFECT -->
+  <script>
+    document.querySelectorAll('main a > div').forEach(card => {
+      card.addEventListener('mouseenter', () => card.style.boxShadow = '0 4px 15px rgba(0,0,0,0.15)');
+      card.addEventListener('mouseleave', () => card.style.boxShadow = 'none');
+    });
+  </script>
+</body>
+
+</html>

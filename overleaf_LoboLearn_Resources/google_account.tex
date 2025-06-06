@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+
+% --- Packages ---
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Maroon,
+    urlcolor=Maroon
+}
+
+% --- UNM Colors ---
+\definecolor{UNMRed}{HTML}{BA0C2F}
+\definecolor{DarkText}{HTML}{1E1E1E}
+\definecolor{Maroon}{HTML}{800000}
+\titleformat{\section}{\color{UNMRed}\normalfont\Large\bfseries}{}{0em}{}
+
+\pagestyle{empty}
+\begin{document}
+
+% --- Title ---
+\begin{center}
+    {\LARGE \bfseries \color{UNMRed}Creating Google Account using UNM Email}
+
+    \vspace{1em}
+    \includegraphics[width=0.20\textwidth]{logo_bold.png}
+\end{center}
+
+\vspace{-1em}
+\noindent\rule{\linewidth}{1pt}
+
+% --- Why Needed ---
+\section*{Why Do I Need This?}
+To access the \textbf{LoboLearn} platform, you must sign in using your Google Account by clicking the red \textbf{“Sign in with Google”} button, as shown below.
+
+\begin{center}
+    \includegraphics[width=0.35\textwidth]{sign-in-button.png}  % ← use your uploaded button image here
+\end{center}
+
+% --- Steps ---
+\section*{Step-by-Step Instructions}
+
+\begin{enumerate}[
+    leftmargin=60pt,
+    label=\textbf{Step \arabic*:},
+    labelwidth=3em,
+    labelsep=1em,
+    align=left,
+    itemsep=1.2em
+]
+
+    \item \textbf{Go to:} \href{https://accounts.google.com/signup/v2/webcreateaccount?flowName=GlifWebSignIn&flowEntry=SignUp}{\texttt{https://accounts.google.com/signup}} \\
+    Fill the basic details.
+
+    \item \textbf{Click on "Use my current email address instead"} \\
+    This allows you to use your UNM email instead of creating a new Gmail.
+
+    \item \textbf{Enter your UNM email address} \\
+    Example: \texttt{kmranrg@unm.edu}
+
+    \item \textbf{Choose a secure password} \\
+    Make sure it is different from your UNM NetID password.
+
+    \item \textbf{Click "Next" and complete verification} \\
+    Google will send a verification code to your UNM email. Open your UNM inbox and enter the code.
+
+    \item \textbf{Complete your profile} \\
+    Add your recovery phone number, etc.
+
+    \item \textbf{Accept the Terms and Privacy Policy} \\
+    Click “Agree” to finish creating your Google Account.
+
+\end{enumerate}
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{1pt}
+
+% --- Footer ---
+\begin{center}
+    \textit{Need more help? Contact us at \href{mailto:lobolearn@unm.edu}{lobolearn@unm.edu}}\\[0.5em]
+\end{center}
+
+\end{document}
